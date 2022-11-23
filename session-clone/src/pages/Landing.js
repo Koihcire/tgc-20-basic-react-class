@@ -12,9 +12,10 @@ export default class Landing extends React.Component {
         try{
             let listingResponse = await axios.get(this.base_url + "listings");
             // console.log(listingResponse.data);
-            let brandsResponse = await axios.get(this.base_url + "brands");
+
+            // let brandsResponse = await axios.get(this.base_url + "brands");
             // console.log(brandsResponse.data);
-            let countriesResponse = await axios.get(this.base_url + "countries");
+            // let countriesResponse = await axios.get(this.base_url + "countries");
             // console.log(countriesResponse.data);
 
             let listingsData = listingResponse.data;
@@ -58,8 +59,8 @@ export default class Landing extends React.Component {
                         {this.state.listings.map(listing => (
                             <tr>
                                 <td>{listing.name}</td>
-                                <td>{listing.countryId}</td>
-                                <td>{listing.brandId}</td>
+                                <td>{listing.country[0].country}</td>
+                                <td>{listing.brand[0].brandName}</td>
                             </tr>
                         ))}
                     </tbody>
