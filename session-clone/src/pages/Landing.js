@@ -15,7 +15,7 @@ export default class Landing extends React.Component {
             let listingsData = listingResponse.data;
 
 
-            //LONG METHOD TO COMBINE MULTIPLE COLLECTIONS AT REACT SIDE
+            //JOIN AT REACT METHOD TO COMBINE MULTIPLE COLLECTIONS AT REACT SIDE
             // let brandsResponse = await axios.get(this.base_url + "brands");
             // console.log(brandsResponse.data);
             // let countriesResponse = await axios.get(this.base_url + "countries");
