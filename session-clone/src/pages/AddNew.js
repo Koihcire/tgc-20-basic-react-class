@@ -70,6 +70,9 @@ export default class AddNew extends React.Component {
         })
 
         console.log(response);
+
+        this.props.changePage("landing");
+
     }
 
     render() {

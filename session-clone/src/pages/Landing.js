@@ -11,7 +11,7 @@ export default class Landing extends React.Component {
     async componentDidMount(){
         try{
             let listingResponse = await axios.get(this.base_url + "listings");
-            // console.log(listingResponse.data);
+            console.log(listingResponse.data);
             let listingsData = listingResponse.data;
 
 
@@ -62,6 +62,8 @@ export default class Landing extends React.Component {
                                 <td>{listing.name}</td>
                                 <td>{listing.country[0].country}</td>
                                 <td>{listing.brand[0].brandName}</td>
+                                {/* <td>{listing.country}</td>
+                                <td>{listing.brand}</td> */}
                             </tr>
                         ))}
                     </tbody>

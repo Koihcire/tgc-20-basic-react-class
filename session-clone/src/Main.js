@@ -19,10 +19,10 @@ export default class Main extends React.Component {
             return <Search />;
         }
         if (this.state.activePage === "addNew"){
-            return <AddNew />
+            return <AddNew changePage={this.changePage.bind(this)}/>;
         }
         if (this.state.activePage === "my"){
-            return <My />
+            return <My />;
         }
     }
 
