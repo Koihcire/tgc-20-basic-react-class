@@ -12,6 +12,24 @@ code {
     monospace;
 }
 
+/* CUSTOM DROPDOWN WITH TRANSITION */
+#dropbox{
+  width: 600px;
+  background-color: red;
+  transition: height 0.5s ease;
+}
+
+.showDropbox {
+  height: 450px;
+  overflow-y: scroll;
+}
+
+.hideDropbox {
+  height: 0px;
+  overflow: hidden;
+}
+/* --- */
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
