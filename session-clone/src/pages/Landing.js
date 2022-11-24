@@ -14,28 +14,6 @@ export default class Landing extends React.Component {
             console.log(listingResponse.data);
             let listingsData = listingResponse.data;
 
-
-            //JOIN AT REACT METHOD TO COMBINE MULTIPLE COLLECTIONS AT REACT SIDE
-            // let brandsResponse = await axios.get(this.base_url + "brands");
-            // console.log(brandsResponse.data);
-            // let countriesResponse = await axios.get(this.base_url + "countries");
-            // console.log(countriesResponse.data);
-
-            // for (let listing of listingsData){
-            //     for (let brand of brandsResponse.data){
-            //         if (listing.brandId === brand._id){
-            //             listing.brand = brand.brandName;
-            //             break;
-            //         }
-            //     }
-            //     for (let country of countriesResponse.data){
-            //         if (listing.countryId === country._id){
-            //             listing.country = country.country;
-            //             break;
-            //         }
-            //     }
-            // }
-
             this.setState({
                 listings: listingsData
             })
@@ -60,10 +38,14 @@ export default class Landing extends React.Component {
                         {this.state.listings.map(listing => (
                             <tr>
                                 <td>{listing.name}</td>
-                                <td>{listing.country[0].country}</td>
-                                <td>{listing.brand[0].brandName}</td>
-                                {/* <td>{listing.country}</td>
-                                <td>{listing.brand}</td> */}
+                                
+                                {/* IF USING AGGREGATE */}
+                                {/* <td>{listing.country[0].country}</td>
+                                <td>{listing.brand[0].brandName}</td> */}
+
+                                {/* IF USING MANUAL JOIN */}
+                                <td>{listing.country}</td>
+                                <td>{listing.brand}</td>
                             </tr>
                         ))}
                     </tbody>
