@@ -29,10 +29,11 @@ export default class Search extends React.Component {
 
                 {/* CUSTOM DROPDOWN WITH TRANSITION */}
                 <div className="container">
+                    <h4>Click to see drop down box with transition</h4>
                     <button className="btn btn-primary btn-sm" onClick={this.toggleDropbox.bind(this)}>Click</button>
                     <div id="dropbox" className={this.state.isDropboxOpen ? "showDropbox" : "hideDropbox"}></div>
                 </div>
-                
+
             </React.Fragment>
         )
     }
