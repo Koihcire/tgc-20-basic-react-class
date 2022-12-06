@@ -13,8 +13,14 @@ code {
 }
 
 /* CUSTOM DROPDOWN WITH TRANSITION */
-#dropbox{
+#dropboxContainer{
   width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+#dropbox{
+  width: 50%;
   background-color: red;
   transition: height 0.5s ease;
 }
