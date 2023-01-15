@@ -11,7 +11,7 @@ export default class AddNew extends React.Component {
 
         countries: [],
         brands: [],
-        
+
         newCountry: ""
     }
 
@@ -78,11 +78,11 @@ export default class AddNew extends React.Component {
     render() {
         return (
             <React.Fragment>
-                <h1>Add a new tool here</h1>
-                
+                <h1>Add a new tool here This is a test</h1>
+
                 <h4>Listing Name</h4>
                 <input name="name" type="text" className="form-control" value={this.state.name} onChange={this.updateFormField}></input>
-                
+
                 <h4>Country</h4>
                 <select className="form-select" name="countryId" onChange={this.updateFormField}>
                     <option selected>Select One</option>
@@ -94,7 +94,7 @@ export default class AddNew extends React.Component {
                     <option value="other">Other</option>
                 </select>
                 {/* conditionally render an input box for user to key in country name, if they select other */}
-                {this.state.countryId === "other" ? 
+                {this.state.countryId === "other" ?
                     <div>
                         <input name="newCountry" type="text" className="form-control" value={this.state.newCountry} onChange={this.updateFormField} placeholder="Add New Country"></input>
                     </div> : ""
