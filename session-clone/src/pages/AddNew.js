@@ -78,7 +78,7 @@ export default class AddNew extends React.Component {
     render() {
         return (
             <React.Fragment>
-                <h1>Add a new tool here This is a test</h1>
+                <h1>Add a new tool here This is a test this</h1>
 
                 <h4>Listing Name</h4>
                 <input name="name" type="text" className="form-control" value={this.state.name} onChange={this.updateFormField}></input>
